@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
-//import 'package:flappy_search_bar/flappy_search_bar.dart';
-
 
 void main() => runApp(app());
 
 class app extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    //returning MaterialApp
     return MaterialApp(
       home: Scaffold(
+        backgroundColor: Colors.white,
         appBar: AppBar(
+          //App Bar starts here
+          toolbarHeight: 80,
           title: const Text(
             'Saloon List',
             style: TextStyle(fontSize: 35),
@@ -19,7 +21,6 @@ class app extends StatelessWidget {
             icon: Icon(Icons.menu),
             onPressed: () {
               print('You Click the Menu Icon');
-              //add notification button on leftside
             },
           ),
           actions: <Widget>[
@@ -28,10 +29,12 @@ class app extends StatelessWidget {
                 Icons.notifications_active,
                 color: Colors.white,
               ),
-              onPressed: () {},
+              onPressed: () {
+                print('You Pressed the Notification Icon');
+              },
             ),
           ],
-          //backgroundColor: Colors.pink ,
+
           flexibleSpace: Container(
             decoration: BoxDecoration(
               gradient: LinearGradient(
@@ -45,26 +48,22 @@ class app extends StatelessWidget {
             ),
           ),
           elevation: 4,
-          bottom: PreferredSize(
-            preferredSize: Size.fromHeight(40),
-            child: SizedBox(
-              height: 40,
-            ),
-          ),
         ),
         body: ListView(
+          //Body starts here
+          //Use ListView for Listout the Fitted Box
           scrollDirection: Axis.vertical,
+           
           children: <Widget>[
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
-              //child: SearchBar(),
             ),
             Padding(
               padding: const EdgeInsets.all(16.0),
               child: Container(
-                //padding(),
                 margin: const EdgeInsets.fromLTRB(15, 20, 0, 0),
                 child: FittedBox(
+                  //Using fitted box to display Saloon Results
                   child: Material(
                     color: Colors.white,
                     elevation: 14.0,
@@ -73,14 +72,14 @@ class app extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: <Widget>[
-                        Container(),
                         Container(
                           //Container for image Section
                           width: 250.0,
-                          // height: 250.0,
+
                           child: ClipRRect(
                             borderRadius: new BorderRadius.circular(24.0),
                             child: Image(
+                              // Applying link of the image
                               image: NetworkImage(
                                   "https://images.unsplash.com/photo-1562322140-8baeececf3df?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"),
                               fit: BoxFit.cover,
@@ -99,7 +98,7 @@ class app extends StatelessWidget {
                                 Container(
                                   alignment: Alignment.topLeft,
                                   //Container for Detail Section
-                                  //child: myDetailsContainer(),
+
                                   child: Text(
                                     'Jowie Ladies Saloon',
                                     style: TextStyle(
@@ -150,7 +149,6 @@ class app extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(16.0),
               child: Container(
-                //padding(),
                 margin: const EdgeInsets.fromLTRB(15, 20, 0, 0),
                 child: FittedBox(
                   child: Material(
@@ -164,7 +162,7 @@ class app extends StatelessWidget {
                         Container(
                           //Container for image Section
                           width: 250.0,
-                          // height: 250.0,
+
                           child: ClipRRect(
                             borderRadius: new BorderRadius.circular(24.0),
                             child: Image(
@@ -186,7 +184,7 @@ class app extends StatelessWidget {
                                 Container(
                                   alignment: Alignment.topLeft,
                                   //Container for Detail Section
-                                  //child: myDetailsContainer(),
+
                                   child: Text(
                                     'Trace of joy Saloon',
                                     style: TextStyle(
@@ -251,7 +249,7 @@ class app extends StatelessWidget {
                         Container(
                           //Container for image Section
                           width: 250.0,
-                          // height: 250.0,
+
                           child: ClipRRect(
                             borderRadius: new BorderRadius.circular(24.0),
                             child: Image(
@@ -273,7 +271,7 @@ class app extends StatelessWidget {
                                 Container(
                                   alignment: Alignment.topLeft,
                                   //Container for Detail Section
-                                  //child: myDetailsContainer(),
+
                                   child: Text(
                                     'Ever Sparkle Beauty \n Saloon',
                                     style: TextStyle(
@@ -324,7 +322,6 @@ class app extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(16.0),
               child: Container(
-                //padding(),
                 margin: const EdgeInsets.fromLTRB(15, 20, 0, 0),
                 child: FittedBox(
                   child: Material(
@@ -338,7 +335,7 @@ class app extends StatelessWidget {
                         Container(
                           //Container for image Section
                           width: 250.0,
-                          // height: 250.0,
+
                           child: ClipRRect(
                             borderRadius: new BorderRadius.circular(24.0),
                             child: Image(
@@ -360,7 +357,7 @@ class app extends StatelessWidget {
                                 Container(
                                   alignment: Alignment.topLeft,
                                   //Container for Detail Section
-                                  //child: myDetailsContainer(),
+
                                   child: Text(
                                     'Sky Star Ladies Saloon',
                                     style: TextStyle(
@@ -411,7 +408,6 @@ class app extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(16.0),
               child: Container(
-                //padding(),
                 margin: const EdgeInsets.fromLTRB(15, 20, 0, 0),
                 child: FittedBox(
                   child: Material(
@@ -425,7 +421,7 @@ class app extends StatelessWidget {
                         Container(
                           //Container for image Section
                           width: 250.0,
-                          // height: 250.0,
+
                           child: ClipRRect(
                             borderRadius: new BorderRadius.circular(24.0),
                             child: Image(
@@ -437,7 +433,6 @@ class app extends StatelessWidget {
                           ),
                         ),
                         Container(
-                          ///
                           child: Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: Column(
@@ -447,7 +442,7 @@ class app extends StatelessWidget {
                                 Container(
                                   alignment: Alignment.topLeft,
                                   //Container for Detail Section
-                                  //child: myDetailsContainer(),
+
                                   child: Text(
                                     'Jowei Men\'s Saloon',
                                     style: TextStyle(
@@ -497,79 +492,47 @@ class app extends StatelessWidget {
             ),
           ],
         ),
-        // bottomNavigationBar: Row(
-        //   children: <Widget>[
-        //     Container(
-        //       height: 60,
-        //       width: MediaQuery.of(context).size.width/5,
-        //       decoration: BoxDecoration(
-        //         color: Colors.pink,
-        //       ),
-
-        //       child: Icon(Icons.calendar_today_outlined),
-        //     ),
-        //     Container(
-        //       height: 60,
-        //       width: MediaQuery.of(context).size.width/5,
-        //       decoration: BoxDecoration(
-        //         color: Colors.pink,
-        //       ),
-
-        //       child: Icon(Icons.favorite),
-        //     ),
-        //     Container(
-        //       height: 60,
-        //       width: MediaQuery.of(context).size.width/5,
-        //       decoration: BoxDecoration(
-        //         color: Colors.pink,
-        //       ),
-
-        //       child: Icon(Icons.settings),
-        //     ),
-        //     Container(
-        //       height: 60,
-        //       width: MediaQuery.of(context).size.width/5,
-        //       decoration: BoxDecoration(
-        //         color: Colors.pink,
-        //       ),
-
-        //       child: Icon(Icons.shopping_cart),
-        //     ),
-        //     Container(
-        //       height: 60,
-        //       width: MediaQuery.of(context).size.width/5,
-        //       decoration: BoxDecoration(
-        //         color: Colors.pink,
-        //       ),
-
-        //       child: Icon(Icons.home),
-        //     ),
-        //   ],
-        // ),
-
         bottomNavigationBar: BottomNavigationBar(
-          //decoration: BoxDecoration(color: Colors.white)
           items: [
             BottomNavigationBarItem(
-                icon: Icon(Icons.home_rounded),
-                title: Text('Home'),
-                backgroundColor: Colors.pink),
+              //NavigationBarItem: Home
+              icon: Icon(
+                Icons.home_outlined,
+                color: Colors.purple.shade400,
+              ),
+              title: Text(
+                'Home',
+                style: TextStyle(fontSize: 12.5, color: Colors.purple.shade400),
+              ),
+            ),
             BottomNavigationBarItem(
-                icon: Icon(Icons.calendar_today_outlined),
-                title: Text('Calender'),
-                backgroundColor: Colors.pink),
+                //NavigationBarItem: Calender
+                icon: Icon(
+                  Icons.calendar_today_outlined,
+                  color: Colors.purple.shade400,
+                ),
+                title: Text('Calender')),
             BottomNavigationBarItem(
-                icon: Icon(Icons.favorite),
-                title: Text('Favourite'),
-                backgroundColor: Colors.pink),
+                //NavigationBarItem: Favourites
+                icon: Icon(
+                  Icons.favorite_border_outlined,
+                  color: Colors.purple,
+                ),
+                title: Text('Favourite')),
             BottomNavigationBarItem(
-                icon: Icon(Icons.settings),
-                title: Text('Settings'),
-                backgroundColor: Colors.pink),
+                //NavigationBarItem: Settings
+                icon: Icon(
+                  Icons.settings_outlined,
+                  color: Colors.purple,
+                ),
+                title: Text('Settings')),
             BottomNavigationBarItem(
-                icon: Icon(Icons.shopping_cart),
-                title: Text('Cart'),
-                backgroundColor: Colors.pink),
+                //NavigationBarItem: Cart
+                icon: Icon(
+                  Icons.shopping_cart_outlined,
+                  color: Colors.purple,
+                ),
+                title: Text('Cart')),
           ],
         ),
       ),
